@@ -2,8 +2,8 @@
 import { NextPage } from "next";
 import React from "react";
 import Layout from "@/components/general/general/Layout";
-import { Reveal } from "@/components/general/motion/Reveal";
 import { MainBody } from "../../components/general/main/MainBody";
+import { Reveal } from "@/components/general/motion/Reveal";
 
 const HomePage: NextPage = () => {
   return (

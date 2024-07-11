@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
   const links: Array<INavbarProps> = [
     { name: "beratk", links: "/" },
     { name: "About Me", links: "/about" },
-    { name: "Competences", links: "/competences" },
+    { name: "Skills", links: "/competences" },
     { name: "Contact", links: "/contact" },
   ];
 
@@ -18,14 +18,14 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <div>
             <ul className="flex">
-              <li className="p-8">
+              <li className="p-8 text-sm hover:text-zinc-400">
                 <Link href={links[0].links}>{links[0].name}</Link>
               </li>
             </ul>
           </div>
           <ul className="flex p-8">
             {links.slice(1).map((e, i) => (
-              <li className="px-8" key={i}>
+              <li className="px-8 text-sm hover:text-zinc-400" key={i}>
                 <Link href={e.links}>{e.name}</Link>
               </li>
             ))}
