@@ -6,25 +6,31 @@ interface INavbarProps {
 }
 export const Navbar: React.FC = () => {
   const links: Array<INavbarProps> = [
-    { name: "home", links: "/" },
-    { name: "about me", links: "/about" },
-    { name: "competences", links: "/competences" },
-    { name: "contact", links: "/contact" },
+    { name: "beratk", links: "/" },
+    { name: "About Me", links: "/about" },
+    { name: "Competences", links: "/competences" },
+    { name: "Contact", links: "/contact" },
   ];
 
   return (
     <>
       <nav>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between">
+          <div>
+            <ul className="flex">
+              <li className="p-8">
+                <Link href={links[0].links}>{links[0].name}</Link>
+              </li>
+            </ul>
+          </div>
           <ul className="flex p-8">
-            {links.map((e, i) => (
+            {links.slice(1).map((e, i) => (
               <li className="px-8" key={i}>
                 <Link href={e.links}>{e.name}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="h-2 bg-gradient-to-r from-pink-700 to-blue-300"></div>
       </nav>
     </>
   );
