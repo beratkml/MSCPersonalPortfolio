@@ -43,8 +43,8 @@ export const AboutBody: React.FC = () => {
 const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, education, work }) => {
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center py-16">
-        <div className="text-center w-1/2">
+      <div className="min-h-screen  flex justify-center items-center py-16">
+        <div className="text-center w-3/5">
           <h1 className={`text-4xl pb-8 ${text_color}`}>{title}</h1>
           <p className={`text-lg ${text_color}`}>{content}</p>
           {education && work && <Timeline education={education} work={work} />}
