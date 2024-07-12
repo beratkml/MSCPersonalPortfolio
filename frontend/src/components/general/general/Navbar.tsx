@@ -14,23 +14,20 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav>
-        <div className="flex items-center justify-between">
-          <div>
-            <ul className="flex">
-              <li className="p-8 text-sm hover:text-zinc-400">
-                <Link href={links[0].links}>{links[0].name}</Link>
-              </li>
-            </ul>
-          </div>
-          <ul className="flex p-8">
-            {links.slice(1).map((e, i) => (
-              <li className="px-8 text-sm hover:text-zinc-400" key={i}>
-                <Link href={e.links}>{e.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <nav className="flex items-center justify-between">
+        <ul className="flex">
+          <li className="px-8 text-sm hover:text-zinc-400">
+            <Link href={links[0].links}>{links[0].name}</Link>
+          </li>
+        </ul>
+
+        <ul className="flex">
+          {links.slice(1).map((e, i) => (
+            <li className="py-8 mr-8 text-sm hover:text-zinc-400" key={i}>
+              <Link href={e.links}>{e.name}</Link>
+            </li>
+          ))}
+        </ul>
       </nav>
     </>
   );

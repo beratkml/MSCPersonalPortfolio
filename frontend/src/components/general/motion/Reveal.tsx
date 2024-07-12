@@ -20,7 +20,7 @@ export const Reveal: React.FC<RevealProps> = ({ children, width = "100%" }) => {
   }, [inView, controls]);
 
   return (
-    <div ref={objectRef} style={{ width }}>
+    <div ref={objectRef}>
       <motion.div
         initial="hidden"
         animate={controls}

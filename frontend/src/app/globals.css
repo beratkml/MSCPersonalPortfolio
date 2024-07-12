@@ -102,6 +102,7 @@ body {
 }
 
 .circles li:nth-child(1) {
+  filter: blur(2px);
   left: 25%;
   width: 80px;
   height: 80px;
@@ -109,6 +110,7 @@ body {
 }
 
 .circles li:nth-child(2) {
+  filter: blur(2px);
   left: 10%;
   width: 20px;
   height: 20px;
@@ -117,6 +119,7 @@ body {
 }
 
 .circles li:nth-child(3) {
+  filter: blur(2px);
   left: 70%;
   width: 20px;
   height: 20px;
@@ -124,6 +127,7 @@ body {
 }
 
 .circles li:nth-child(4) {
+  filter: blur(2px);
   left: 40%;
   width: 60px;
   height: 60px;
@@ -132,6 +136,7 @@ body {
 }
 
 .circles li:nth-child(5) {
+  filter: blur(4px);
   left: 65%;
   width: 20px;
   height: 20px;

@@ -43,9 +43,9 @@ export const AboutBody: React.FC = () => {
 const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, education, work }) => {
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center p-16">
+      <div className="min-h-screen flex justify-center items-center py-16">
         <div className="text-center w-1/2">
-          <h1 className={`text-5xl pb-8 ${text_color}`}>{title}</h1>
+          <h1 className={`text-4xl pb-8 ${text_color}`}>{title}</h1>
           <p className={`text-lg ${text_color}`}>{content}</p>
           {education && work && <Timeline education={education} work={work} />}
         </div>
@@ -95,10 +95,10 @@ const SingleTimelineComponent: React.FC<TimelineInfo> = (data) => {
         <div className="absolute w-4 h-4 bg-stone-950 rounded-full mt-1.5 -left-2"></div>
         <time className="mb-1 text-stone-950 leading-none ">{data.years_active}</time>
         <div className="block rounded-lg bg-stone-950 p-6 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
-          <h5 className="mb-2 text-lg font-medium leading-tight">
+          <h5 className="mb-2 text-sm font-medium leading-tight">
             {data.education || data.expertise}
           </h5>
-          <p className="mb-4 text-sm">
+          <p className="mb-4 text-xs">
             {data.school ? data.school : data.company}, {data.city}
           </p>
         </div>
