@@ -28,7 +28,7 @@ export const Reveal: React.FC<RevealProps> = ({ children, width = "100%" }) => {
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },
         }}
-        transition={{ duration: 0.6, delay: 1 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
       >
         {children}
       </motion.div>

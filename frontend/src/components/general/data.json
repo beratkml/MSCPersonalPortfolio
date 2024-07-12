@@ -2,23 +2,37 @@
   "about_data": [
     {
       "title": "Introduction",
-      "content": "Hello, my name is Berat Kamali and I'm an applied computer science student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions.",
-      "other": [{}]
+      "content": "Hello, my name is Berat Kamali and I'm an applied computer science student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
     },
     {
-      "title": "Background & Education",
-      "content": "Hello, my name is Berat Kamali and I'm an applied computer science student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions.",
-      "other": [{}]
-    },
-    {
-      "title": "Experience",
-      "content": "Hello, my name is Berat Kamali and I'm an applied computer science student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions.",
-      "other": [{}]
+      "title": "Education & Experience",
+      "content": "",
+      "education": [
+        {
+          "school": "HoGent",
+          "city": "Gent",
+          "years_active": "September 2021 - Current",
+          "education": "Bachelor in Applied Informatics"
+        },
+        {
+          "school": "Onze-Lieve-Vrouw-Presentatie",
+          "city": "Sint-Niklaas",
+          "years_active": "September 2019 - June 2021",
+          "education": "Accounting Informatics"
+        }
+      ],
+      "work": [
+        {
+          "company": "Vanden Borre",
+          "city": "Lokeren",
+          "expertise": "Job Student Salesman",
+          "years_active": "August 2022 – December 2022"
+        }
+      ]
     },
     {
       "title": "Future goals",
-      "content": "Hello, my name is Berat Kamali and I'm an applied computer science student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions.",
-      "other": [{}]
+      "content": "Hello, my name is Berat Kamali and I'm an applied informatics student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
     }
   ],
   "skills_data": [{}]
