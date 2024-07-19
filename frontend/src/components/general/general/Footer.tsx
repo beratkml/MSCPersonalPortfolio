@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <>
       <footer>
-        <div className="p-8 text-center">
+        <div className="p-8 text-sm text-center">
           <p>© {currentYear} Berat Kamali All Rights Reserved</p>
         </div>
       </footer>

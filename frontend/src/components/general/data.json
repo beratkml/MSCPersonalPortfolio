@@ -2,23 +2,25 @@
   "about_data": [
     {
       "title": "Introduction",
-      "content": "Hello, my name is Berat Kamali and I'm an applied computer science student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
+      "content": "Hello, my name is Berat Kamali and I'm an applied informatics student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
     },
     {
-      "title": "Education & Experience",
+      "title": "Education & Experiences",
       "content": "",
       "education": [
         {
           "school": "HoGent",
           "city": "Gent",
           "years_active": "September 2021 - Current",
-          "education": "Bachelor in Applied Informatics"
+          "education": "Bachelor in Applied Informatics",
+          "context": "Currently studying Applied Informatics at HoGent, specializing in Mobile & Web Development."
         },
         {
           "school": "Onze-Lieve-Vrouw-Presentatie",
           "city": "Sint-Niklaas",
           "years_active": "September 2019 - June 2021",
-          "education": "Accounting Informatics"
+          "education": "Accounting and Informatics",
+          "context": "Acquired my highschool diploma for Accounting and Informatics (TSO)."
         }
       ],
       "work": [
@@ -26,13 +28,14 @@
           "company": "Vanden Borre",
           "city": "Lokeren",
           "expertise": "Job Student Salesman",
-          "years_active": "August 2022 – December 2022"
+          "years_active": "August 2022 – December 2022",
+          "context": "Served as a salesman selling electronics and insurances."
         }
       ]
     },
     {
       "title": "Future goals",
-      "content": "Hello, my name is Berat Kamali and I'm an applied informatics student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
+      "content": "Information Technology (IT) is a field drawn by continuous change, where staying updated and adapting quickly are essential.\\n\\n By commiting to lifelong learning, I aim to contribute innovative projects and remain at the cutting edge inside the IT field."
     }
   ],
   "skills_data": [{}]

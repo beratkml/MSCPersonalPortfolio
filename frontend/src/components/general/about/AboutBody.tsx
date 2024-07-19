@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import about_data from "../data.json";
 import { Reveal } from "../motion/Reveal";
 
@@ -22,6 +22,7 @@ interface TimelineInfo {
   school?: string;
   years_active?: string;
   education?: string;
+  context?: string;
 }
 
 export const AboutBody: React.FC = () => {
@@ -41,12 +42,16 @@ export const AboutBody: React.FC = () => {
 };
 
 const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, education, work }) => {
+  const formattedContent = content.replace(/\\n/g, "<br>");
   return (
     <>
-      <div className="min-h-screen  flex justify-center items-center py-16">
+      <div className="min-h-screen  w-full flex justify-center items-center py-16">
         <div className="text-center w-3/5">
           <h1 className={`text-4xl pb-8 ${text_color}`}>{title}</h1>
-          <p className={`text-lg ${text_color}`}>{content}</p>
+          <p
+            className={`text-lg text-left ${text_color}`}
+            dangerouslySetInnerHTML={{ __html: formattedContent }}
+          ></p>
           {education && work && <Timeline education={education} work={work} />}
         </div>
       </div>
@@ -94,13 +99,14 @@ const SingleTimelineComponent: React.FC<TimelineInfo> = (data) => {
       <li className="mb-12 ml-8 text-left">
         <div className="absolute w-4 h-4 bg-stone-950 rounded-full mt-1.5 -left-2"></div>
         <time className="mb-1 text-stone-950 leading-none ">{data.years_active}</time>
-        <div className="block rounded-lg bg-stone-950 p-6 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
-          <h5 className="mb-2 text-sm font-medium leading-tight">
+        <div className="block mt-2 rounded-lg bg-stone-950 p-6 text-surface shadow-md shadow-stone-600 dark:bg-surface-dark dark:text-white">
+          <h5 className="mb-0 text-md font-medium leading-tight">
             {data.education || data.expertise}
           </h5>
-          <p className="mb-4 text-xs">
+          <p className="mb-2 text-sm">
             {data.school ? data.school : data.company}, {data.city}
           </p>
+          <p className="text-xs italic hidden md:block">{data.context}</p>
         </div>
       </li>
     </>
