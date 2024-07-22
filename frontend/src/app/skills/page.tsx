@@ -1,13 +1,15 @@
+"use client";
 import { NextPage } from "next";
 import Layout from "../../components/general/general/Layout";
 import React from "react";
+import SkillBody from "@/components/general/skills/SkillBody";
 
-const Competences: NextPage = () => {
+const Skills: NextPage = () => {
   return (
     <Layout>
-      <p>competences</p>
+      <SkillBody />
     </Layout>
   );
 };
 
-export default Competences;
+export default Skills;

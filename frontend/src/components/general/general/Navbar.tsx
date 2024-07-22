@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
   const links: Array<INavbarProps> = [
     { name: "beratk", links: "/" },
     { name: "About Me", links: "/about" },
-    { name: "Skills", links: "/competences" },
+    { name: "Skills", links: "/skills" },
     { name: "Contact", links: "/contact" },
   ];
 

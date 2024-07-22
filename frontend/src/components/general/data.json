@@ -38,5 +38,71 @@
       "content": "Information Technology (IT) is a field drawn by continuous change, where staying updated and adapting quickly are essential.\\n\\n By commiting to lifelong learning, I aim to contribute innovative projects and remain at the cutting edge inside the IT field."
     }
   ],
-  "skills_data": [{}]
+  "skills_data": {
+    "actual_skills": [
+      {
+        "name": "HTML",
+        "xp": 5,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+      },
+      {
+        "name": "CSS",
+        "xp": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png"
+      },
+      {
+        "name": "Javascript",
+        "xp": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Javascript_Logo.png/188px-Javascript_Logo.png"
+      },
+      {
+        "name": "Typescript",
+        "xp": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/96px-Typescript.svg.png"
+      },
+      {
+        "name": "Java",
+        "xp": 4,
+        "image_url": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png"
+      },
+      {
+        "name": "React",
+        "xp": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/180px-React_Logo_SVG.svg.png"
+      },
+      {
+        "name": "Auth0",
+        "xp": 2,
+        "image_url": "https://static-00.iconduck.com/assets.00/auth0-icon-1832x2048-ewzjrdwk.png"
+      },
+      {
+        "name": "GIT",
+        "xp": 4,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png"
+      },
+      {
+        "name": "Python",
+        "xp": 3,
+        "image_url": "https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png"
+      },
+      {
+        "name": "C#",
+        "xp": 3,
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png"
+      },
+      {
+        "name": "LlamaIndex",
+        "xp": 2,
+        "image_url": "https://asset.brandfetch.io/id6a4s3gXI/idncpUsO_z.jpeg"
+      },
+      {
+        "name": "Microsoft SQL Server",
+        "xp": 3,
+        "image_url": "https://www.sqlservertutorial.net/wp-content/uploads/sql-server-tutorial.svg"
+      }
+    ],
+    "projects": [
+      { "name": "xoxo", "technologies": ["xoxo", "xoxox", "xoxox"], "github_link": "xoxo" }
+    ]
+  }
 }
