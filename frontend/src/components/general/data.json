@@ -73,7 +73,7 @@
       {
         "name": "Auth0",
         "xp": 2,
-        "image_url": "https://static-00.iconduck.com/assets.00/auth0-icon-1832x2048-ewzjrdwk.png"
+        "image_url": "https://www.svgrepo.com/show/448264/auth0.svg"
       },
       {
         "name": "GIT",
@@ -98,11 +98,49 @@
       {
         "name": "Microsoft SQL Server",
         "xp": 3,
-        "image_url": "https://www.sqlservertutorial.net/wp-content/uploads/sql-server-tutorial.svg"
+        "image_url": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
       }
     ],
     "projects": [
-      { "name": "xoxo", "technologies": ["xoxo", "xoxox", "xoxox"], "github_link": "xoxo" }
+      {
+        "name": "Personal Portfolio (current)",
+        "description": "A personal portfolio website where I showcase my skills, projects,education and professional experience.",
+        "technologies": ["Typescript", "TailwindCSS", "React", "NextJS"],
+        "github": {
+          "repos": [],
+          "types": []
+        }
+      },
+      {
+        "name": "Mangaverz",
+        "description": "Mangaverz is a school project designed for users to create their personal collections of favorite manga. The primary purpose of the platform is to help users keep track of their reading progress for each manga.",
+        "technologies": ["Javascript", "Prisma", "React", "Auth0", "ChakraUI", "GIT"],
+        "github": {
+          "repos": [
+            "https://github.com/beratkml/hogentWebserviceManga",
+            "https://github.com/beratkml/hogentFrontEnd"
+          ],
+          "types": ["Backend", "Frontend"]
+        }
+      },
+      {
+        "name": "MSCYoutubeSummarizer",
+        "description": "MSCYoutubeSummarizer's purpose is to provide users with a brief overview of a video's content, helping them decide whether the video is beneficial or relevant to their interests.\n \n Note: The tool operates by running the LLM (Gemma 2) locally with Ollama, which may result in some delays during each generation process.",
+        "technologies": ["Python", "Ollama", "LlamaIndex", "Streamlit", "FastAPI", "GIT"],
+        "github": {
+          "repos": ["https://github.com/beratkml/MSCYoutubeSummarizer"],
+          "types": []
+        }
+      },
+      {
+        "name": "Personal Blog (coming soon)",
+        "description": "A personal blog where I will share whatever comes in my mind :p",
+        "technologies": ["C#", "ASP.NET", "Blazor", "FluentAPI", "Sqlite", "Entity Framework Core"],
+        "github": {
+          "repos": [],
+          "types": []
+        }
+      }
     ]
   }
 }

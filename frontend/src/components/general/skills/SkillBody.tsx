@@ -17,23 +17,23 @@ interface ActualSkillsData {
 
 interface ProjectsData {
   name: string;
+  description: string;
   technologies: string[];
-  github_link: string;
+  github: {
+    repos: string[];
+    types: string[];
+  };
 }
 const SkillBody: NextPage = () => {
   const skills_arr: SkillsProps = skills_data.skills_data;
   return (
     <>
       <div className="bg-stone-950">
-        <Reveal>
-          <SectionComponent actual_skills={skills_arr.actual_skills} projects={[]} />
-        </Reveal>
+        <SectionComponent actual_skills={skills_arr.actual_skills} projects={[]} />
       </div>
 
       <div className="bg-neutral-300">
-        <Reveal>
-          <SectionComponent actual_skills={[]} projects={skills_arr.projects} />
-        </Reveal>
+        <SectionComponent actual_skills={[]} projects={skills_arr.projects} />
       </div>
     </>
   );
@@ -58,26 +58,28 @@ interface ProjectsLayoutProperties {
 
 const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills }) => {
   return (
-    <div className="min-h-screen w-full text-center flex flex-col justify-center items-center py-16">
-      <h1 className="text-4xl p-8 text-center text-white">Hard Skills</h1>
-      <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8 justify-items-center">
-        {actual_skills
-          .sort((a, b) => b.xp - a.xp)
-          .map((e, i) => (
-            <div key={i} className="w-full max-w-[250px]">
-              {" "}
-              <SkillItemGrid {...e} />
-            </div>
-          ))}
+    <Reveal>
+      <div className="min-h-screen w-full text-center flex flex-col justify-center items-center py-16">
+        <h1 className="text-4xl p-8 text-center text-white">Hard Skills</h1>
+        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8 justify-items-center mb-16">
+          {actual_skills
+            .sort((a, b) => b.xp - a.xp)
+            .map((e, i) => (
+              <div key={i} className="w-full max-w-[250px]">
+                {" "}
+                <SkillItemGrid {...e} />
+              </div>
+            ))}
+        </div>
       </div>
-    </div>
+    </Reveal>
   );
 };
 
 const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
   return (
     <>
-      <div className=" m-4 bg-neutral-300 rounded-lg shadow w-full">
+      <div className=" m-4 bg-neutral-300 rounded-lg shadow-md h-full flex flex-col shadow-stone-500">
         <div className="p-6 ">
           <div className="flex justify-center mb-2">
             <Image
@@ -85,7 +87,7 @@ const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
               height={80}
               alt={`logo`}
               src={data.image_url || "/default-image.png"}
-              className="object-contain h-32"
+              className="object-contain "
             />
           </div>
           <h5 className="mb-4 text-lg font-bold tracking-tight text-stone-900 text-center">
@@ -114,8 +116,79 @@ const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
 const ProjectsLayout: React.FC<ProjectsLayoutProperties> = ({ projects }) => {
   return (
     <>
-      <div className="min-h-screen bg-neutral-300 w-full flex justify-center items-center py-16">
-        <h1 className={`text-4xl pb-8 text-stone-950`}>Projects</h1>
+      <div className="min-h-screen bg-neutral-300 w-full flex flex-col items-center py-16">
+        <Reveal>
+          <h1 className={`text-4xl text-center pb-8 text-stone-950`}>Projects</h1>
+          <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {projects.map((e, i) => (
+              <div key={i}>
+                <ProjectGrid {...e} />
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </>
+  );
+};
+
+const ProjectGrid: React.FC<ProjectsData> = (data) => {
+  return (
+    <>
+      <div className="max-w-sm h-[500px] p-2 rounded bg-stone-950 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
+        <div className="px-6 py-4 flex-1">
+          <div className="font-bold text-xl mb-2">{data.name}</div>
+          <p
+            className="text-gray-400 text-sm mb-4"
+            dangerouslySetInnerHTML={{
+              __html: data.description.replace(/\n/g, "<br />"),
+            }}
+          ></p>
+          {data.github.repos.length !== 0 ? (
+            data.github.types.length !== 0 ? (
+              <div>
+                <p className="text-md">Github repositories</p>
+                <ol>
+                  {data.github.types.map((e, i) => (
+                    <div key={i}>
+                      <li className="text-gray-400 flex text-sm">
+                        <a target="_blank" href={data.github.repos[i]}>
+                          {e}
+                        </a>
+                      </li>
+                    </div>
+                  ))}
+                </ol>
+              </div>
+            ) : (
+              <div>
+                <p>Github repository</p>
+                <p className="text-gray-400 flex text-sm mb-4">
+                  {data.github.repos.map((e, i) => (
+                    <a target="_blank" key={i} href={e}>
+                      MSCYoutubeSummarizer
+                    </a>
+                  ))}
+                </p>
+              </div>
+            )
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="px-6 pt-4 pb-2">
+          <p className="text-gray-300 text-sm font-medium mb-2">Technologies</p>
+          <div className="flex flex-wrap">
+            {data.technologies.map((tech, index) => (
+              <span
+                key={index}
+                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
