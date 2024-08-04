@@ -96,7 +96,7 @@
         "image_url": "https://asset.brandfetch.io/id6a4s3gXI/idncpUsO_z.jpeg"
       },
       {
-        "name": "Microsoft SQL Server",
+        "name": "SQL Server",
         "xp": 3,
         "image_url": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
       }
@@ -105,7 +105,8 @@
       {
         "name": "Personal Portfolio (current)",
         "description": "A personal portfolio website where I showcase my skills, projects,education and professional experience.",
-        "technologies": ["Typescript", "TailwindCSS", "React", "NextJS"],
+        "technologies": ["Typescript", "TailwindCSS", "React", "NextJS", "GIT"],
+        "estimated_date": "2024",
         "github": {
           "repos": [],
           "types": []
@@ -115,6 +116,7 @@
         "name": "Mangaverz",
         "description": "Mangaverz is a school project designed for users to create their personal collections of favorite manga. The primary purpose of the platform is to help users keep track of their reading progress for each manga.",
         "technologies": ["Javascript", "Prisma", "React", "Auth0", "ChakraUI", "GIT"],
+        "estimated_date": "2023",
         "github": {
           "repos": [
             "https://github.com/beratkml/hogentWebserviceManga",
@@ -127,6 +129,7 @@
         "name": "MSCYoutubeSummarizer",
         "description": "MSCYoutubeSummarizer's purpose is to provide users with a brief overview of a video's content, helping them decide whether the video is beneficial or relevant to their interests.\n \n Note: The tool operates by running the LLM (Gemma 2) locally with Ollama, which may result in some delays during each generation process.",
         "technologies": ["Python", "Ollama", "LlamaIndex", "Streamlit", "FastAPI", "GIT"],
+        "estimated_date": "2024",
         "github": {
           "repos": ["https://github.com/beratkml/MSCYoutubeSummarizer"],
           "types": []
@@ -135,9 +138,28 @@
       {
         "name": "Personal Blog (coming soon)",
         "description": "A personal blog where I will share whatever comes in my mind :p",
-        "technologies": ["C#", "ASP.NET", "Blazor", "FluentAPI", "Sqlite", "Entity Framework Core"],
+        "technologies": [
+          "C#",
+          "ASP.NET",
+          "Blazor",
+          "FluentAPI",
+          "Sqlite",
+          "Entity Framework Core",
+          "GIT"
+        ],
+        "estimated_date": "2024",
         "github": {
           "repos": [],
+          "types": []
+        }
+      },
+      {
+        "name": "Spring Boot Library API",
+        "description": "A simple library inventory API built with Spring Boot, allowing users to save and manage their favorite books.",
+        "technologies": ["Java", "Spring Boot", "MYSQL", "Thymeleaf", "GIT"],
+        "estimated_date": "2023",
+        "github": {
+          "repos": ["https://github.com/beratkml/EWD_Bibliotheek"],
           "types": []
         }
       }

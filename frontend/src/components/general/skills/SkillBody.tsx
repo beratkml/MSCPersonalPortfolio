@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NextPage } from "next";
 import skills_data from "../data.json";
 import { Reveal } from "../motion/Reveal";
@@ -19,6 +19,7 @@ interface ProjectsData {
   name: string;
   description: string;
   technologies: string[];
+  estimated_date: string;
   github: {
     repos: string[];
     types: string[];
@@ -58,33 +59,32 @@ interface ProjectsLayoutProperties {
 
 const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills }) => {
   return (
-    <Reveal>
-      <div className="min-h-screen w-full text-center flex flex-col justify-center items-center py-16">
-        <h1 className="text-4xl p-8 text-center text-white">Hard Skills</h1>
-        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8 justify-items-center mb-16">
+    <div className="min-h-screen w-full flex flex-col items-center py-16">
+      <Reveal>
+        <p className="text-5xl pb-8 text-neutral-100 font-normal text-left">Hard Skills</p>
+        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
           {actual_skills
             .sort((a, b) => b.xp - a.xp)
             .map((e, i) => (
-              <div key={i} className="w-full max-w-[250px]">
-                {" "}
+              <div key={i}>
                 <SkillItemGrid {...e} />
               </div>
             ))}
         </div>
-      </div>
-    </Reveal>
+      </Reveal>
+    </div>
   );
 };
 
 const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
   return (
     <>
-      <div className=" m-4 bg-neutral-300 rounded-lg shadow-md h-full flex flex-col shadow-stone-500">
-        <div className="p-6 ">
+      <div className="xs:w-[350px] lg:w-[275px] h-[250px] p-2 rounded bg-stone-200 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
+        <div className="p-6">
           <div className="flex justify-center mb-2">
             <Image
-              width={80}
-              height={80}
+              width={70}
+              height={70}
               alt={`logo`}
               src={data.image_url || "/default-image.png"}
               className="object-contain "
@@ -116,15 +116,23 @@ const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
 const ProjectsLayout: React.FC<ProjectsLayoutProperties> = ({ projects }) => {
   return (
     <>
-      <div className="min-h-screen bg-neutral-300 w-full flex flex-col items-center py-16">
+      <div className="min-h-screen bg-stone-200 w-full flex flex-col items-center py-16">
         <Reveal>
-          <h1 className={`text-4xl text-center pb-8 text-stone-950`}>Projects</h1>
-          <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-            {projects.map((e, i) => (
-              <div key={i}>
-                <ProjectGrid {...e} />
-              </div>
-            ))}
+          <p className={`text-5xl pb-8 text-stone-950 md:text-left text-center font-normal`}>
+            Projects
+          </p>
+          <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+            {projects
+              .sort((a, b) => {
+                const dateA = new Date(a.estimated_date);
+                const dateB = new Date(b.estimated_date);
+                return dateB.getTime() - dateA.getTime();
+              })
+              .map((e, i) => (
+                <div key={i}>
+                  <ProjectGrid {...e} />
+                </div>
+              ))}
           </div>
         </Reveal>
       </div>
@@ -137,7 +145,11 @@ const ProjectGrid: React.FC<ProjectsData> = (data) => {
     <>
       <div className="max-w-sm h-[500px] p-2 rounded bg-stone-950 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
         <div className="px-6 py-4 flex-1">
-          <div className="font-bold text-xl mb-2">{data.name}</div>
+          <div className="flex flex-col">
+            <p className="text-sm">{data.estimated_date}</p>
+            <h1 className="font-bold text-xl mb-2">{data.name}</h1>
+          </div>
+
           <p
             className="text-gray-400 text-sm mb-4"
             dangerouslySetInnerHTML={{
@@ -166,7 +178,7 @@ const ProjectGrid: React.FC<ProjectsData> = (data) => {
                 <p className="text-gray-400 flex text-sm mb-4">
                   {data.github.repos.map((e, i) => (
                     <a target="_blank" key={i} href={e}>
-                      MSCYoutubeSummarizer
+                      {e.split("/").pop()}
                     </a>
                   ))}
                 </p>

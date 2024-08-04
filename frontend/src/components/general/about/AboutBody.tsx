@@ -31,7 +31,7 @@ export const AboutBody: React.FC = () => {
   return (
     <>
       {about_data_ar.map((e, i) => (
-        <div key={i} className={`${i % 2 === 0 ? "bg-stone-950" : "bg-neutral-300"}`}>
+        <div key={i} className={`${i % 2 === 0 ? "bg-stone-950" : "bg-stone-200"}`}>
           <Reveal>
             <SectionComponent {...e} text_color={`${i % 2 !== 0 ? "text-stone-950" : ""}`} />
           </Reveal>
@@ -46,10 +46,10 @@ const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, edu
   return (
     <>
       <div className="min-h-screen  w-full flex justify-center items-center py-16">
-        <div className="text-center w-3/5">
-          <h1 className={`text-4xl pb-8 ${text_color}`}>{title}</h1>
+        <div className="text-left w-3/5">
+          <h1 className={`text-5xl pb-8 ${text_color}`}>{title}</h1>
           <p
-            className={`text-lg text-left ${text_color}`}
+            className={`text-md text-left ${text_color}`}
             dangerouslySetInnerHTML={{ __html: formattedContent }}
           ></p>
           {education && work && <Timeline education={education} work={work} />}
@@ -81,7 +81,7 @@ const Timeline: React.FC<TimelineProps> = ({ education, work }) => {
   return (
     <>
       <div>
-        <ol className="relative mx-auto w-3/4 border-s border-gray-200 dark:border-gray-700">
+        <ol className="relative mx-auto w-75 border-s border-gray-200 dark:border-gray-700">
           {combined.map((e, i) => (
             <div key={i}>
               <SingleTimelineComponent {...e} />
@@ -98,11 +98,11 @@ const SingleTimelineComponent: React.FC<TimelineInfo> = (data) => {
     <>
       <li className="mb-12 ml-8 text-left">
         <div className="absolute w-4 h-4 bg-stone-950 rounded-full mt-1.5 -left-2"></div>
-        <time className="mb-1 text-stone-950 leading-none ">{data.years_active}</time>
+        <time className="mb-1 text-stone-950 leading-none">{data.years_active}</time>
         <div className="block mt-2 rounded-lg bg-stone-950 p-6 text-surface shadow-md shadow-stone-600 dark:bg-surface-dark dark:text-white">
-          <h5 className="mb-0 text-md font-medium leading-tight">
+          <p className="mb-0 text-md font-medium leading-tight">
             {data.education || data.expertise}
-          </h5>
+          </p>
           <p className="mb-2 text-sm">
             {data.school ? data.school : data.company}, {data.city}
           </p>
