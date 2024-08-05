@@ -7,12 +7,18 @@ import Image from "next/image";
 interface SkillsProps {
   actual_skills: ActualSkillsData[];
   projects: ProjectsData[];
+  soft_skills: SoftSkillsData[];
 }
 
 interface ActualSkillsData {
   name: string;
   xp: number;
   image_url: string;
+}
+
+interface SoftSkillsData {
+  name: string;
+  description: string;
 }
 
 interface ProjectsData {
@@ -30,22 +36,29 @@ const SkillBody: NextPage = () => {
   return (
     <>
       <div className="bg-zinc-950">
-        <SectionComponent actual_skills={skills_arr.actual_skills} projects={[]} />
+        <SectionComponent actual_skills={skills_arr.actual_skills} projects={[]} soft_skills={[]} />
       </div>
 
       <div className="bg-neutral-300">
-        <SectionComponent actual_skills={[]} projects={skills_arr.projects} />
+        <SectionComponent actual_skills={[]} projects={skills_arr.projects} soft_skills={[]} />
+      </div>
+
+      <div className="bg-zinc-950">
+        <SectionComponent soft_skills={skills_arr.soft_skills} actual_skills={[]} projects={[]} />
       </div>
     </>
   );
 };
 
-const SectionComponent: React.FC<SkillsProps> = ({ actual_skills, projects }) => {
+const SectionComponent: React.FC<SkillsProps> = ({ actual_skills, projects, soft_skills }) => {
   if (actual_skills.length > 0) {
     return <ActualSkillsLayout actual_skills={actual_skills} />;
   }
   if (projects.length > 0) {
     return <ProjectsLayout projects={projects} />;
+  }
+  if (soft_skills.length > 0) {
+    return <SoftSkillsLayout soft_skills={soft_skills} />;
   }
 };
 
@@ -55,6 +68,10 @@ interface ActualLayoutProperties {
 
 interface ProjectsLayoutProperties {
   projects: ProjectsData[];
+}
+
+interface SoftSkillsLayoutProperties {
+  soft_skills: SoftSkillsData[];
 }
 
 const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills }) => {
@@ -202,6 +219,36 @@ const ProjectGrid: React.FC<ProjectsData> = (data) => {
           </div>
         </div>
       </div>
+    </>
+  );
+};
+
+const SoftSkillsLayout: React.FC<SoftSkillsLayoutProperties> = ({ soft_skills }) => {
+  return (
+    <>
+      <Reveal>
+        <div className="min-h-screen w-full flex justify-center items-center py-16">
+          <div className="text-left w-[78%]">
+            <p className="text-5xl pb-8 text-neutral-100 font-normal">Soft Skills</p>
+            <ol className="list-decimal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+              {soft_skills.map((e, i) => (
+                <li key={i}>
+                  <SoftSkillItem {...e} />
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </Reveal>
+    </>
+  );
+};
+
+const SoftSkillItem: React.FC<SoftSkillsData> = (data) => {
+  return (
+    <>
+      <p className="text-3xl pb-2 text-left">{data.name}</p>
+      <p className="text-neutral-300 text-md flex mb-4">{data.description}</p>
     </>
   );
 };

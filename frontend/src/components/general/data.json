@@ -2,7 +2,7 @@
   "about_data": [
     {
       "title": "Introduction",
-      "content": "Hello, my name is Berat Kamali and I'm an applied informatics student studying development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
+      "content": "Hello, my name is Berat Kamali. I'm 21 years old and I'm an applied informatics, student specializing in mobile and enterprise development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
     },
     {
       "title": "Education & Experiences",
@@ -20,7 +20,7 @@
           "city": "Sint-Niklaas",
           "years_active": "September 2019 - June 2021",
           "education": "Accounting and Informatics",
-          "context": "Acquired my highschool diploma for Accounting and Informatics (TSO)."
+          "context": "Acquired my high school diploma for Accounting and Informatics (Boekhouden-Informatica TSO)."
         }
       ],
       "work": [
@@ -35,7 +35,7 @@
     },
     {
       "title": "Future goals",
-      "content": "Information Technology (IT) is a field drawn by continuous change, where staying updated and adapting quickly are essential.\\n\\n By commiting to lifelong learning, I aim to contribute innovative projects and remain at the cutting edge inside the IT field."
+      "content": "Information Technology is a field drawn by continuous change, where staying up-to-date and adapting quickly are essential.\n \n By commiting to lifelong learning, I aim to contribute innovative projects and remain at the cutting edge inside the IT field."
     }
   ],
   "skills_data": {
@@ -162,6 +162,24 @@
           "repos": ["https://github.com/beratkml/EWD_Bibliotheek"],
           "types": []
         }
+      }
+    ],
+    "soft_skills": [
+      {
+        "name": "Communication",
+        "description": "Communication is an important aspect in software development, ensuring clarity, structure, and collaboration within a team. Therefore, I prioritize clear and open dialogue, whether it is technical or non-technical."
+      },
+      {
+        "name": "Teamwork",
+        "description": "Teamwork is essential in order to achieve greater succes. I believe that open communication and mutual support achieves this. Hence I strive for a collaborative environment where each team member feels valued and heard."
+      },
+      {
+        "name": "Work ethic",
+        "description": "I strive to consistently demonstrate strong work ethic by showing dedication, responsibility and a commitment to delivering high-quality work. I believe that a positive attitude and a passion for continuous improvement are the key fundaments that drive both personal and team achievements."
+      },
+      {
+        "name": "Learning Agility",
+        "description": "Staying curious, open to new ideas and eager to acquire new skills is a beneficial mindset that embraces continuous learning and adaptability. My commitment to learning agility allows me to stay ahead of industry trends and apply to the latest best practices."
       }
     ]
   }

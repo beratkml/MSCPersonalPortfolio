@@ -42,7 +42,7 @@ export const AboutBody: React.FC = () => {
 };
 
 const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, education, work }) => {
-  const formattedContent = content.replace(/\\n/g, "<br>");
+  const formattedContent = content.replace(/\n/g, "<br />");
   return (
     <>
       <div className="min-h-screen  w-full flex justify-center items-center py-16">
