@@ -29,7 +29,7 @@ const SkillBody: NextPage = () => {
   const skills_arr: SkillsProps = skills_data.skills_data;
   return (
     <>
-      <div className="bg-stone-950">
+      <div className="bg-zinc-950">
         <SectionComponent actual_skills={skills_arr.actual_skills} projects={[]} />
       </div>
 
@@ -79,7 +79,7 @@ const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills })
 const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
   return (
     <>
-      <div className="xs:w-[350px] lg:w-[275px] h-[250px] p-2 rounded bg-stone-200 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
+      <div className="xs:w-[350px] lg:w-[273px] h-[250px] p-2 rounded bg-stone-200 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
         <div className="p-6">
           <div className="flex justify-center mb-2">
             <Image
@@ -143,7 +143,7 @@ const ProjectsLayout: React.FC<ProjectsLayoutProperties> = ({ projects }) => {
 const ProjectGrid: React.FC<ProjectsData> = (data) => {
   return (
     <>
-      <div className="max-w-sm h-[500px] p-2 rounded bg-stone-950 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
+      <div className="max-w-sm h-[500px] p-2 rounded bg-zinc-950 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
         <div className="px-6 py-4 flex-1">
           <div className="flex flex-col">
             <p className="text-sm">{data.estimated_date}</p>
@@ -191,12 +191,12 @@ const ProjectGrid: React.FC<ProjectsData> = (data) => {
         <div className="px-6 pt-4 pb-2">
           <p className="text-gray-300 text-sm font-medium mb-2">Technologies</p>
           <div className="flex flex-wrap">
-            {data.technologies.map((tech, index) => (
+            {data.technologies.map((e, i) => (
               <span
-                key={index}
-                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                key={i}
+                className="inline-block bg-stone-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >
-                {tech}
+                {e}
               </span>
             ))}
           </div>

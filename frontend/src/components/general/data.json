@@ -115,7 +115,7 @@
       {
         "name": "Mangaverz",
         "description": "Mangaverz is a school project designed for users to create their personal collections of favorite manga. The primary purpose of the platform is to help users keep track of their reading progress for each manga.",
-        "technologies": ["Javascript", "Prisma", "React", "Auth0", "ChakraUI", "GIT"],
+        "technologies": ["Javascript", "Prisma", "React", "Auth0", "ChakraUI", "MYSQL", "GIT"],
         "estimated_date": "2023",
         "github": {
           "repos": [
@@ -137,7 +137,7 @@
       },
       {
         "name": "Personal Blog (coming soon)",
-        "description": "A personal blog where I will share whatever comes in my mind :p",
+        "description": "A personal blog where I'll share my thoughts and ideas :p.",
         "technologies": [
           "C#",
           "ASP.NET",

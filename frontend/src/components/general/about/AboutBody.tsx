@@ -31,7 +31,7 @@ export const AboutBody: React.FC = () => {
   return (
     <>
       {about_data_ar.map((e, i) => (
-        <div key={i} className={`${i % 2 === 0 ? "bg-stone-950" : "bg-stone-200"}`}>
+        <div key={i} className={`${i % 2 === 0 ? "bg-zinc-950" : "bg-stone-200"}`}>
           <Reveal>
             <SectionComponent {...e} text_color={`${i % 2 !== 0 ? "text-stone-950" : ""}`} />
           </Reveal>
@@ -97,9 +97,9 @@ const SingleTimelineComponent: React.FC<TimelineInfo> = (data) => {
   return (
     <>
       <li className="mb-12 ml-8 text-left">
-        <div className="absolute w-4 h-4 bg-stone-950 rounded-full mt-1.5 -left-2"></div>
+        <div className="absolute w-4 h-4 bg-zinc-950 rounded-full mt-1.5 -left-2"></div>
         <time className="mb-1 text-stone-950 leading-none">{data.years_active}</time>
-        <div className="block mt-2 rounded-lg bg-stone-950 p-6 text-surface shadow-md shadow-stone-600 dark:bg-surface-dark dark:text-white">
+        <div className="block mt-2 rounded-lg bg-zinc-950 p-6 text-surface shadow-md shadow-stone-600 dark:bg-surface-dark dark:text-white">
           <p className="mb-0 text-md font-medium leading-tight">
             {data.education || data.expertise}
           </p>
