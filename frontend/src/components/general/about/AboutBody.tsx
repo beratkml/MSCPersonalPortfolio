@@ -31,7 +31,7 @@ export const AboutBody: React.FC = () => {
   return (
     <>
       {about_data_ar.map((e, i) => (
-        <div key={i} className={`${i % 2 === 0 ? "bg-zinc-950" : "bg-stone-200"}`}>
+        <div key={i} className={`${i % 2 === 0 ? "bg-zinc-950" : "bg-neutral-300"}`}>
           <Reveal>
             <SectionComponent {...e} text_color={`${i % 2 !== 0 ? "text-stone-950" : ""}`} />
           </Reveal>
