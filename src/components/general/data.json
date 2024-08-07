@@ -2,7 +2,7 @@
   "about_data": [
     {
       "title": "Introduction",
-      "content": "Hello, my name is Berat Kamali. I'm 21 years old and I'm an applied informatics, student specializing in mobile and enterprise development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
+      "content": "Hello, my name is Berat Kamali. I'm 21 years old and I'm an applied informatics student, specializing in mobile and enterprise development. I have a passion for technology and a keen interest in exploring new tools and technologies to build innovative solutions."
     },
     {
       "title": "Education & Experiences",
@@ -104,7 +104,7 @@
     "projects": [
       {
         "name": "Personal Portfolio (current)",
-        "description": "A personal portfolio website where I showcase my skills, projects,education and professional experience.",
+        "description": "A personal portfolio website where I showcase my skills, projects, education and professional experience.",
         "technologies": ["Typescript", "TailwindCSS", "React", "NextJS", "GIT"],
         "estimated_date": "2024",
         "github": {
@@ -114,7 +114,7 @@
       },
       {
         "name": "Mangaverz",
-        "description": "Mangaverz is a school project designed for users to create their personal collections of favorite manga. The primary purpose of the platform is to help users keep track of their reading progress for each manga.",
+        "description": "Mangaverz is a school project designed for users to create their personal collections of their favorite mangas. The primary purpose of the platform is to help users keep track of their reading progress for each manga.",
         "technologies": ["Javascript", "Prisma", "React", "Auth0", "ChakraUI", "MYSQL", "GIT"],
         "estimated_date": "2023",
         "github": {
