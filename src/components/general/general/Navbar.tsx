@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface INavbarProps {
   name: string;
@@ -9,17 +9,27 @@ interface INavbarProps {
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
 
   const links: Array<INavbarProps> = [
-    { name: "Berat Kamali", links: "/" },
+    { name: !isMobile ? "Berat Kamali" : "Home", links: "/" },
     { name: "About Me", links: "/about" },
     { name: "Skills", links: "/skills" },
     { name: "Contact", links: "/contact" },
   ];
+
+  useEffect(() => {
+    const handleBreakpoint = () => {
+      setIsMobile(window.innerWidth < 750);
+    };
+    handleBreakpoint();
+    window.addEventListener("resize", handleBreakpoint);
+    return () => window.removeEventListener("resize", handleBreakpoint);
+  }, []);
 
   return (
     <>
@@ -64,7 +74,7 @@ export const Navbar: React.FC = () => {
           </button>
           <div className={`md:hidden w-full ${isOpen ? "block" : "hidden"}`}>
             <ul className="flex flex-col">
-              {links.slice(1).map((e, i) => (
+              {links.map((e, i) => (
                 <li className="py-4 text-md hover:text-zinc-400" key={i}>
                   <Link href={e.links}>{e.name}</Link>
                 </li>
