@@ -95,38 +95,37 @@ const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills })
 
 const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
   return (
-    <>
-      <div className="xs:w-[350px] lg:w-[273px] h-[250px] p-2 rounded bg-stone-200 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
-        <div className="p-6">
-          <div className="flex justify-center mb-2">
-            <Image
-              width={70}
-              height={70}
-              alt={`logo`}
-              src={data.image_url || "/default-image.png"}
-              className="object-contain "
-            />
-          </div>
-          <h5 className="mb-4 text-lg font-bold tracking-tight text-stone-900 text-center">
-            {data.name}
-          </h5>
-          <p className="mb-4 text-sm font-normal text-stone-700 text-center">Experience</p>
-          <div className="flex justify-center">
-            {Array(5)
-              .fill(0)
-              .map((e, i) => (
-                <div key={i} className="mx-1">
-                  {i < data.xp ? (
-                    <div className="w-2 h-2 bg-stone-900 rounded-full"></div>
-                  ) : (
-                    <div className="w-2 h-2 bg-stone-100 rounded-full"></div>
-                  )}
-                </div>
-              ))}
-          </div>
+    <div className="xs:w-[350px] lg:w-[273px] h-[250px] p-2 rounded bg-stone-200 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
+      <div className="p-6 flex flex-col h-full">
+        <div className="flex justify-center mb-2 h-[80px]">
+          <Image
+            width={70}
+            height={70}
+            alt={`logo`}
+            src={data.image_url || "/default-image.png"}
+            className="object-contain"
+          />
+        </div>
+        <h5 className="mb-4 text-lg font-bold tracking-tight text-stone-900 text-center">
+          {data.name}
+        </h5>
+        <div className="flex-grow"></div>
+        <p className="mb-4 text-sm font-normal text-stone-700 text-center">Experience</p>
+        <div className="flex justify-center">
+          {Array(5)
+            .fill(0)
+            .map((e, i) => (
+              <div key={i} className="mx-1">
+                {i < data.xp ? (
+                  <div className="w-2 h-2 bg-stone-900 rounded-full"></div>
+                ) : (
+                  <div className="w-2 h-2 bg-stone-100 rounded-full"></div>
+                )}
+              </div>
+            ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

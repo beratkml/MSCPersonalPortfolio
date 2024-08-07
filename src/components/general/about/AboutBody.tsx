@@ -46,7 +46,7 @@ const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, edu
   return (
     <>
       <div className="min-h-screen  w-full flex justify-center items-center py-16">
-        <div className="text-left w-3/5">
+        <div className="text-left w-[70%] md:w-3/5">
           <h1 className={`text-5xl pb-8 ${text_color}`}>{title}</h1>
           <p
             className={`text-md text-left ${text_color}`}

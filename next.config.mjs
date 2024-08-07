@@ -2,7 +2,14 @@
 const nextConfig = {
   output: "export",
   images: {
-    remotePatterns: [
+    unoptimized: true,
+  },
+};
+
+export default nextConfig;
+
+/*
+remotePatterns: [
       {
         protocol: "https", // or http
         hostname: "upload.wikimedia.org", // if your website has no www, drop it
@@ -27,8 +34,4 @@ const nextConfig = {
         protocol: "https", // or http
         hostname: "cdn4.iconfinder.com", // if your website has no www, drop it
       },
-    ],
-  },
-};
-
-export default nextConfig;
+    ], */

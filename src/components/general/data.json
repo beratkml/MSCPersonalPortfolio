@@ -43,62 +43,62 @@
       {
         "name": "HTML",
         "xp": 5,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+        "image_url": "/HTML5_logo_and_wordmark.svg.png"
       },
       {
         "name": "CSS",
         "xp": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png"
+        "image_url": "/CSS3_logo.svg.png"
       },
       {
         "name": "Javascript",
         "xp": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Javascript_Logo.png/188px-Javascript_Logo.png"
+        "image_url": "/JavaScript-logo.png"
       },
       {
         "name": "Typescript",
         "xp": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/96px-Typescript.svg.png"
+        "image_url": "/Typescript_logo_2020.svg.png"
       },
       {
         "name": "Java",
         "xp": 4,
-        "image_url": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png"
+        "image_url": "/181_Java_logo_logos-512.webp"
       },
       {
         "name": "React",
         "xp": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/180px-React_Logo_SVG.svg.png"
+        "image_url": "/React-icon.svg.png"
       },
       {
         "name": "Auth0",
         "xp": 2,
-        "image_url": "https://www.svgrepo.com/show/448264/auth0.svg"
+        "image_url": "/auth0-icon-1832x2048-ewzjrdwk.png"
       },
       {
         "name": "GIT",
         "xp": 4,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png"
+        "image_url": "/Git_icon.svg.png"
       },
       {
         "name": "Python",
         "xp": 3,
-        "image_url": "https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png"
+        "image_url": "/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp"
       },
       {
         "name": "C#",
         "xp": 3,
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png"
+        "image_url": "/Logo_C_sharp.svg.png"
       },
       {
         "name": "LlamaIndex",
         "xp": 2,
-        "image_url": "https://asset.brandfetch.io/id6a4s3gXI/idncpUsO_z.jpeg"
+        "image_url": "/n-PNQGgd_400x400.jpg"
       },
       {
         "name": "SQL Server",
         "xp": 3,
-        "image_url": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+        "image_url": "/microsoft-sql-server-logo.svg"
       }
     ],
     "projects": [
