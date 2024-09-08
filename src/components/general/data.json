@@ -99,6 +99,16 @@
         "name": "SQL Server",
         "xp": 3,
         "image_url": "/microsoft-sql-server-logo.svg"
+      },
+      {
+        "name": "Spring Boot",
+        "xp": 3,
+        "image_url": "/SpringBootLogo.png"
+      },
+      {
+        "name": ".NET Core",
+        "xp": 3,
+        "image_url": "/CORE.png"
       }
     ],
     "projects": [

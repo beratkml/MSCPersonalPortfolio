@@ -39,7 +39,7 @@ const SkillBody: NextPage = () => {
         <SectionComponent actual_skills={skills_arr.actual_skills} projects={[]} soft_skills={[]} />
       </div>
 
-      <div className="bg-neutral-300">
+      <div className="bg-stone-100">
         <SectionComponent actual_skills={[]} projects={skills_arr.projects} soft_skills={[]} />
       </div>
 
@@ -95,7 +95,7 @@ const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills })
 
 const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
   return (
-    <div className="xs:w-[350px] lg:w-[273px] h-[250px] p-2 rounded bg-stone-200 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
+    <div className="xs:w-[350px] lg:w-[273px] h-[250px] p-2 rounded bg-stone-100 overflow-hidden shadow-md shadow-stone-500 flex flex-col">
       <div className="p-6 flex flex-col h-full">
         <div className="flex justify-center mb-2 h-[80px]">
           <Image
@@ -132,7 +132,7 @@ const SkillItemGrid: React.FC<ActualSkillsData> = (data) => {
 const ProjectsLayout: React.FC<ProjectsLayoutProperties> = ({ projects }) => {
   return (
     <>
-      <div className="min-h-screen bg-stone-200 w-full flex flex-col items-center py-16">
+      <div className="min-h-screen bg-stone-100 w-full flex flex-col items-center py-16">
         <Reveal>
           <p className={`text-5xl pb-8 text-stone-950 md:text-left text-center font-normal`}>
             Projects
