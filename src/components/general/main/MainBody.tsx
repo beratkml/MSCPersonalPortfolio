@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 export const MainBody: React.FC = () => {
+  useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    setVh();
+    window.addEventListener("resize", setVh);
+
+    return () => window.removeEventListener("resize", setVh);
+  }, []);
   return (
     <>
-      <section className="h-screen-custom flex justify-center items-center ">
+      <section className="min-h-screen flex justify-center items-center ">
         <div className="text-center">
           <h2 className="text-5xl font-bold">Berat Kamali</h2>
           <p className="text-xl mt-4">Applied Informatics Student</p>
