@@ -6,7 +6,7 @@ interface RevealProps {
   width?: "fit-content" | "100%";
 }
 
-export const Reveal: React.FC<RevealProps> = ({ children, width = "100%" }) => {
+export const Reveal: React.FC<RevealProps> = ({ children }) => {
   const objectRef = useRef<HTMLDivElement | null>(null);
   const inView = useInView(objectRef, { once: true });
   const controls = useAnimation();
