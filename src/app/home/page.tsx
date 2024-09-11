@@ -8,7 +8,7 @@ import { Reveal } from "@/components/general/motion/Reveal";
 const HomePage: NextPage = () => {
   return (
     <Layout>
-      <div className="area">
+      {/* <div className="area">
         <ul className="circles">
           {Array(10)
             .fill(0)
@@ -16,10 +16,8 @@ const HomePage: NextPage = () => {
               <li key={i}></li>
             ))}
         </ul>
-      </div>
-      <Reveal>
-        <MainBody />
-      </Reveal>
+      </div> */}
+      <MainBody />
     </Layout>
   );
 };
