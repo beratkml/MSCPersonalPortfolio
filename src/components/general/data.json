@@ -146,12 +146,11 @@
         }
       },
       {
-        "name": "Personal Blog (coming soon)",
-        "description": "A personal blog where I'll share my thoughts and ideas :p.",
+        "name": "MSCMD (in development)",
+        "description": "A desktop notes application where users can create, organize, and save a variety of documents.",
         "technologies": [
           "C#",
-          "ASP.NET",
-          "Blazor",
+          "ASP.NET Core",
           "FluentAPI",
           "Sqlite",
           "Entity Framework Core",
