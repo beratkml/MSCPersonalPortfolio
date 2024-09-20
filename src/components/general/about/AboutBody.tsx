@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import about_data from "../data.json";
 import { Reveal } from "../motion/Reveal";
+import about_data from "../data.json";
 
 interface AboutData {
   title: string;
@@ -45,9 +45,9 @@ const SectionComponent: React.FC<AboutData> = ({ title, content, text_color, edu
   const formattedContent = content.replace(/\n/g, "<br />");
   return (
     <>
-      <div className="min-h-screen  w-full flex justify-center items-center py-16">
+      <div className="min-h-screen w-full flex justify-center items-center py-16">
         <div className="text-left w-[70%] md:w-3/5">
-          <h1 className={`text-5xl pb-8 ${text_color}`}>{title}</h1>
+          <h1 className={`md:text-5xl text-4xl pb-8 ${text_color}`}>{title}</h1>
           <p
             className={`text-md text-left ${text_color}`}
             dangerouslySetInnerHTML={{ __html: formattedContent }}

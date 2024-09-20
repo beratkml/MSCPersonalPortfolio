@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { NextPage } from "next";
 import skills_data from "../data.json";
-import { Reveal } from "../motion/Reveal";
 import Image from "next/image";
+import { Reveal } from "../motion/Reveal";
 
 interface SkillsProps {
   actual_skills: ActualSkillsData[];
@@ -78,7 +78,10 @@ const ActualSkillsLayout: React.FC<ActualLayoutProperties> = ({ actual_skills })
   return (
     <div className="min-h-screen w-full flex flex-col items-center py-16">
       <Reveal>
-        <p className="text-5xl pb-8 text-neutral-100 font-normal text-left">Hard Skills</p>
+        <div className="text-left w-[100%]">
+          <p className="text-5xl pb-8 text-neutral-100 font-normal text-left">Hard Skills</p>
+        </div>
+
         <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
           {actual_skills
             .sort((a, b) => b.xp - a.xp)
@@ -134,9 +137,12 @@ const ProjectsLayout: React.FC<ProjectsLayoutProperties> = ({ projects }) => {
     <>
       <div className="min-h-screen bg-stone-100 w-full flex flex-col items-center py-16">
         <Reveal>
-          <p className={`text-5xl pb-8 text-stone-950 md:text-left text-center font-normal`}>
-            Projects
-          </p>
+          <div className="text-left w-[80%]">
+            <p className={`text-5xl pb-8 text-stone-950 md:text-left text-left font-normal`}>
+              Projects
+            </p>
+          </div>
+
           <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
             {projects
               .sort((a, b) => {

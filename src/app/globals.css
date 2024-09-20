@@ -79,6 +79,18 @@ body {
   }
 }
 
+.my-div {
+  transition: all 0.9s;
+}
+
+.area {
+  background: #09090b;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
 .circles {
   position: absolute;
   top: 0;

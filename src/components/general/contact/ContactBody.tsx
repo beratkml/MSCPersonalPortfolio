@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { IoMailOpen } from "react-icons/io5";
 import { Reveal } from "../motion/Reveal";
 
 export const ContactBody: React.FC = () => {
@@ -24,11 +23,16 @@ const SectionComponent: React.FC = () => {
       <div className="min-h-screen w-full flex justify-center items-center py-16">
         <Reveal>
           <div className="text-center md:text-left w-full">
-            <h1 className={`text-5xl pb-4`}>{`Let's Connect!`}</h1>
-            <p className="text-left pb-2 text-center md:text-left">
-              Whether you have questions, comments, or just want to connect, feel free to use any of
-              these platforms to get in touch.
-            </p>
+            <div className="text-center w-full">
+              <h1 className={`text-5xl pb-4`}>{`Let's Connect!`}</h1>
+            </div>
+            <div className="text-center w-full">
+              <p className=" pb-2 ">
+                Whether you have questions, comments, or just want to connect, feel free to use any
+                of these platforms to get in touch.
+              </p>
+            </div>
+
             <div className="flex flex-row space-x-8 items-center justify-center">
               {platforms.map((e, i) => (
                 <div key={i}>
