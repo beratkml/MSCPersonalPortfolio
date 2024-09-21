@@ -123,6 +123,16 @@
         }
       },
       {
+        "name": "Delaware B2B Portal Desktop & Webapp",
+        "description": "A B2B portal that enables businesses to order products from one another. It includes a desktop application for suppliers to manage orders, coordinate transportation, oversee delivery logistics, and for administrators to manage employees.\n \n Additionally, it offers a web application where businesses can conveniently place their orders. ",
+        "technologies": ["Java", "JavaFX", "React", "Javascript", "GIT", "MYSQL", "Auth0"],
+        "estimated_date": "2023",
+        "github": {
+          "repos": [],
+          "types": []
+        }
+      },
+      {
         "name": "Mangaverz",
         "description": "Mangaverz is a school project designed for users to create their personal collections of their favorite mangas. The primary purpose of the platform is to help users keep track of their reading progress for each manga.",
         "technologies": ["Javascript", "Prisma", "React", "Auth0", "ChakraUI", "MYSQL", "GIT"],
