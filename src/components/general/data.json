@@ -123,6 +123,25 @@
         }
       },
       {
+        "name": "BUUT",
+        "description": "This project was developed by a team of six, where we created an Android app using Jetpack Compose and a web application built with C#/Blazor for the company BUUT. The primary purpose of the app is to allow BUUT members to rent boats for their trips. Previously, the system had a major security flaw, as members could view each other’s reservations. We resolved this issue by implementing a robust privacy mechanism, ensuring that users can only access their own reservations.",
+        "technologies": [
+          "Kotlin",
+          "Jetpack Compose",
+          "C#",
+          "Blazor",
+          "Strapi",
+          "Material3",
+          "Retrofit",
+          "GIT"
+        ],
+        "estimated_date": "2024",
+        "github": {
+          "repos": [],
+          "types": []
+        }
+      },
+      {
         "name": "Delaware B2B Portal Desktop & Webapp",
         "description": "A B2B portal that enables businesses to order products from one another. It includes a desktop application for suppliers to manage orders, coordinate transportation, oversee delivery logistics, and for administrators to manage employees.\n \n Additionally, it offers a web application where businesses can conveniently place their orders. ",
         "technologies": ["Java", "JavaFX", "React", "Javascript", "GIT", "MYSQL", "Auth0"],
